@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Sidebar from '@/components/Sidebar';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "AI 3D Tumor Intelligence Platform",
-  description: "AI-powered 3D tumor detection, analysis, and teleconsultation platform",
+  title: 'AI 3D Tumor Platform',
+  description: 'AI-powered 3D Tumor Intelligence & Teleconsultation Platform',
 };
 
 export default function RootLayout({
@@ -15,8 +16,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="vi">
-      <body className={inter.className}>{children}</body>
+    <html lang="en">
+      <body className={inter.className} style={{ display: 'flex', height: '100vh', overflow: 'hidden' }}>
+        <Sidebar />
+        <main style={{
+          flex: 1,
+          overflowY: 'auto',
+          background: '#020617',
+          padding: '32px 40px',
+        }}>
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
