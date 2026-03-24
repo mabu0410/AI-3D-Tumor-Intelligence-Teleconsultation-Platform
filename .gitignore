@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.env
+venv/
+.venv/
+env/
+
+# Models & large files
+models/weights/*.pth
+models/weights/*.pt
+storage/dicom/
+storage/meshes/
+storage/masks/
+
+# Next.js
+frontend/.next/
+frontend/out/
+frontend/node_modules/
+
+# Docker
+.dockerignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Alembic
+alembic/versions/*.pyc
