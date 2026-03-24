@@ -1,9 +1,6 @@
-import Link from 'next/link';
-import { Metadata } from 'next';
+"use client";
 
-export const metadata: Metadata = {
-  title: 'Dashboard | AI Tumor Platform',
-};
+import Link from 'next/link';
 
 const MODULE_CARDS = [
   { id: 1, title: 'Segmentation 3D', icon: '🧠', desc: 'Upload DICOM, run AI inference, extract tumor mask.', path: '/segmentation', color: '#6366f1' },
